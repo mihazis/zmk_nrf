@@ -23,14 +23,14 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
 // |  ESC    |   Q   |   W   |   E   |   R   |   T   |                  |   Y   |   U   |     I     |    O    |    P    |   [    |
-// |  TAB    |   A   |   S   |   D   |   F   |   G   |                  |   H   |   J   |     K     |    L    |    ;    |    '   |
+// |  LGUI   |   A   |   S   |   D   |   F   |   G   |                  |   H   |   J   |     K     |    L    |    ;    |    '   |
 // |  LCTL   |   Z   |   X   |   C   |   V   |   B   |                  |   N   |   M   |     ,     |    .    |    /    |    ]   |
-//                            |  SHFT    |  LWR/LALT  |  RSE/SPACE |   | RSE/BSPC |  LWR/DEL    |     SFT/ENT    |
+//                                |SHFT|RSE/ALT|SPACE|                  |BSPC|LWR/-|SFT/ENT|
                         bindings = <            
     &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T                   &kp Y      &kp U    &kp I       &kp O    &kp P     &kp LBKT
-    &kp TAB    &kp A   &kp S   &kp D   &kp F   &kp G                   &kp H      &kp J    &kp K       &kp L    &kp SEMI  &kp SQT
+    &kp LGUI   &kp A   &kp S   &kp D   &kp F   &kp G                   &kp H      &kp J    &kp K       &kp L    &kp SEMI  &kp SQT
     &kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &kp B                   &kp N      &kp M    &kp COMMA   &kp DOT  &kp FSLH  &kp RBKT           
-                &kp LSHFT &lt LWR LALT &lt RSE SPACE                   &lt RSE BSPC &lt LWR MINUS &mt RSHFT ENTER
+                    &kp LSHFT &lt RSE LALT &kp SPACE                   &kp BSPC &lt LWR MINUS &mt RSHFT ENTER
                         >;
                 };
                 lower_layer {
@@ -40,10 +40,10 @@
 // |   +     |  !    |   @   |   #   |   $   |   %   |                  |  ^    |  &    |    *     |   (   |   )   |  -  |
 //                           |  GUI      |     | SPC |                  | ENT   |       |  ALT   |
                         bindings = <
-   &kp UNDER      &kp F1   &kp F2 &kp F3   &kp F4   &kp F5           &kp F6    &kp F7   &kp F8   &kp F9   &kp F10  &kp F11   
-   &mt LALT EQUAL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp F12
-   &mt LCTRL PLUS &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt RCTRL MINUS
-                                    &lt ADJ TAB &trans &trans        &trans &trans &lt ADJ DEL
+   &kp F1    &kp F2   &kp F3  &kp F4   &kp F5   &kp F6                   &kp F7    &kp F8   &kp F9   &kp F10  &kp F11  &kp F12   
+   &kp EQUAL &kp N1   &kp N2  &kp N3   &kp N4   &kp N5                   &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp F12
+   &kp PLUS  &kp EXCL &kp AT  &kp HASH &kp DLLR &kp PRCNT                &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp UNDER
+                             &lt ADJ TAB &trans &trans                   &trans &trans &lt ADJ DEL
                         >;
                 };
 
@@ -54,10 +54,10 @@
 // |      @        |    ~     |   C+x   |   C+c   |   C+v   |   A+S   |                  | HOME| PGDN | PGUP| END| PAUS|     |
 //                                      |   ADJ   |         |         |                  | ADJ |     |     |
                         bindings = <
-   &kp LA(TAB)     &kp LC(Q)  &kp LC(W) &kp LC(E) &kp LA(N4) &kp KP_MINUS                &kp INS      &kp BSPC &kp DEL   &kp PG_UP &kp SLCK &kp CAPS
+   &kp LA(TAB)     &kp LC(Q)  &kp LC(W) &kp LC(E) &kp LA(N4)&kp KP_MINUS                &kp INS      &kp BSPC &kp DEL   &kp PG_UP &kp SLCK &kp CAPS
    &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT     &kp DOWN &kp UP    &kp RIGHT &kp INS  &mt RCTRL K_APP
-   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V)  &kp LA(LSHFT)               &kp HOME     &kp PG_DN   &kp PG_UP &kp END &kp PAUSE_BREAK &trans
-                                               &lt ADJ RET &trans   &trans                      &lt ADJ ESC  &trans   &trans
+   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V) &kp LGUI(SPACE)             &kp HOME     &kp PG_DN   &kp PG_UP &kp END &kp PAUSE_BREAK &trans
+                                               &lt ADJ RET &trans   &trans              &lt ADJ ESC  &trans   &trans
                         >;
                 };
                 adjust_layer {

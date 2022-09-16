@@ -54,9 +54,9 @@
 // |      @        |    ~     |   C+x   |   C+c   |   C+v   |   A+S   |                  | HOME | PGDN| PGUP| END | PAUS|     |
 //                                      |   ADJ   |         |         |                  | ADJ  |     |     |
                         bindings = <
-   &kp LA(TAB)     &kp LC(Q)  &kp LC(W) &kp LC(E) &kp LA(N4)&kp KP_MINUS                &kp INS     &kp BSPC  &kp DEL   &kp PG_UP &kp LS(LC(RA(1))) &kp LC(RA(1))
-   &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LS(LC(RA(2))) &kp LC(RA(2))
-   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V) &kp LG(SPACE)               &kp HOME    &kp PG_DN &kp PG_UP &kp END   &kp LS(LC(RA(3))) &kp LC(RA(3))
+   &kp LA(TAB)     &kp LC(Q)  &kp LC(W) &kp LC(E) &kp LA(N4)&kp KP_MINUS                &kp INS     &kp BSPC  &kp DEL   &kp PG_UP &kp LS(LC(RA(N1))) &kp LC(RA(N1))
+   &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LS(LC(RA(N2))) &kp LC(RA(N2))
+   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V) &kp LG(SPACE)               &kp HOME    &kp PG_DN &kp PG_UP &kp END   &kp LS(LC(RA(N3))) &kp LC(RA(N3))
                                                &lt ADJ RET &trans   &trans              &lt ADJ ESC &trans    &trans
                         >;
                 };

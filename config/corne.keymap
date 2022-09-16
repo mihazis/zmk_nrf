@@ -56,7 +56,7 @@
                         bindings = <
    &kp LA(TAB)     &kp LC(Q)  &kp LC(W) &kp LC(E) &kp LA(N4)&kp KP_MINUS                &kp INS      &kp BSPC &kp DEL   &kp PG_UP &kp SLCK &kp CAPS
    &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT     &kp DOWN &kp UP    &kp RIGHT &kp INS  &mt RCTRL K_APP
-   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V) &kp LGUI(SPACE)             &kp HOME     &kp PG_DN   &kp PG_UP &kp END &kp PAUSE_BREAK &trans
+   &kp AT          &kp GRAVE  &kp LC(X) &kp LC(C) &kp LC(V) &kp LG(SPACE)             &kp HOME     &kp PG_DN   &kp PG_UP &kp END &kp PAUSE_BREAK &trans
                                                &lt ADJ RET &trans   &trans              &lt ADJ ESC  &trans   &trans
                         >;
                 };

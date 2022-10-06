@@ -17,6 +17,15 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+       behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp M>, <&kp MINUS>, <&kp PLUS>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -29,7 +38,7 @@
                         bindings = <            
     &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T                   &kp Y      &kp U    &kp I       &kp O    &kp P     &kp LBKT
     &kp LGUI   &kp A   &kp S   &kp D   &kp F   &kp G                   &kp H      &kp J    &kp K       &kp L    &kp SEMI  &kp SQT
-    &kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &kp B                   &kp N      &kp M    &kp COMMA   &kp DOT  &kp FSLH  &kp RBKT           
+    &kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &kp B                   &kp N      &kp td0  &kp COMMA   &kp DOT  &kp FSLH  &kp RBKT           
                     &kp LSHFT  &mo RSE &kp SPACE                   &kp BSPC &lt LWR MINUS &mt RSHFT ENTER
                         >;
                 };

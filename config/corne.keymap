@@ -63,8 +63,8 @@
 // |      @        |    ~     |  Win+x  |  Win+c  |  Win+v  |   A+S   |                  | HOME | PGDN| PGUP| END | PAUS|     |
 //                                      |   ADJ   |         |         |                  | ADJ  |     |     |
                         bindings = <
-   &kp LA(TAB)     &kp LA(F1) &kp LA(F2) &kp LA(N3) &kp LA(N4)&kp LA(N5)                &kp INS     &kp BSPC  &kp DEL   &kp PG_UP &kp LS(LC(RA(N1))) &kp LC(RA(N1))
-   &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LS(LC(RA(N2))) &kp LC(RA(N2))
+   &kp LA(TAB)     &kp LA(F1) &kp LA(F2) &kp LA(N3) &kp LA(N4)&kp LA(N5)                &kp INS     &kp BSPC  &kp DEL   &kp PG_UP &kp LS(N5) &kp LC(B)
+   &kp LC(LA(TAB)) &kp LC(A)  &kp PIPE &kp TAB   &kp FSLH   &kp LS(FSLH)                &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LC(W)  &kp LS(SQT)
    &kp AT          &kp GRAVE  &kp LG(X) &kp LG(C) &kp LG(V) &kp LA(LSHFT)               &kp HOME    &kp PG_DN &kp PG_UP &kp END   &kp LS(LC(RA(N3))) &kp LC(RA(N3))
                                                &lt ADJ RET &trans   &trans              &lt ADJ ESC &trans    &trans
                         >;

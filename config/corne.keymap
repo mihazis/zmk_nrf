@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 Rafael Yumagulov
  *
- * SPDX-License-Identifier: MITh
+ * SPDX-License-Identifier: MITh                          основной комп будем вешать на 1й слот, ноутбук на 5й
  */
 
 #include <behaviors.dtsi>

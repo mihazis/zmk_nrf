@@ -82,6 +82,7 @@
                                                                                                       &kp PLUS       &kp EXCL       &kp AT       &kp HASH      &kp DLLR     &kp PRCNT                       &kp CARET      &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp RA(G)
                                                                                                                                                 &lt ADJ TAB      &trans       &mo CSM                         &trans         &trans      &lt ADJ DEL
                                                                                                                         >;
+                                                                                                                };
                                                                                                                 adjust_layer {
                                                                                                 // -----------------------------------------------------------------------------------------
                                                                                                 // |     BLDR    |             |             |             |             |             |                  |             |             |             |             |             |    BLDR     |
@@ -95,5 +96,4 @@
                                                                                                                                                   &trans        &none         &trans                           &trans        &none         &trans
                                                                                                                         >;
                                                                                                                 };
-                                                                                                        };
                                                                                                 };

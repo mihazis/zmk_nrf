@@ -11,7 +11,8 @@
                                                                                                 #define DEF 0
                                                                                                 #define LWR 1
                                                                                                 #define RSE 2
-                                                                                                #define ADJ 3
+                                                                                                #define CSM 3
+                                                                                                #define ADJ 4
 
                                                                                                 &lt { quick_tap_ms = <200>; };
                                                                                                 &mt { quick_tap_ms = <200>; };
@@ -52,7 +53,7 @@
                                                                                                        &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                         &kp EXCL        &kp AT        &kp SQT      &kp LBKT      &kp RBKT       &kp F11  
                                                                                                       &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6         &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
                                                                                                       &kp PLUS       &kp EXCL       &kp AT       &kp HASH      &kp DLLR     &kp PRCNT                       &kp CARET      &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp RA(G)
-                                                                                                                                                &lt ADJ TAB      &trans       &trans                          &trans         &trans      &lt ADJ DEL
+                                                                                                                                                &lt ADJ TAB      &trans       &mo CSM                         &trans         &trans      &lt ADJ DEL
                                                                                                                         >;
                                                                                                                 };
 
@@ -66,9 +67,21 @@
                                                                                                      &kp LA(TAB)    &kp LA(F1)    &kp LA(F2)    &kp LA(N3)    &kp LA(N4)    &kp MINUS                         &kp INS      &kp BSPC       &kp DEL      &kp PG_UP     &kp LS(N5)    &kp LC(B)
                                                                                                      &kp LA(TAB)    &kp LC(A)     &kp PIPE      &kp TAB       &kp FSLH     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LC(W)     &kp LS(SQT)
                                                                                                        &kp AT       &kp GRAVE     &kp LG(X)     &kp LG(C)     &kp LG(V)   &kp LA(LSHFT)                       &kp HOME     &kp PG_DN      &kp PG_UP     &kp END      &kp END        &kp END
-                                                                                                                                                &lt ADJ RET    &trans         &trans                          &trans       &kp ENTER      &trans
+                                                                                                                                                &lt ADJ RET    &trans         &trans                          &mo CSM       &kp ENTER      &trans
                                                                                                                         >;
                                                                                                                 };
+                                                                                                                custom_layer {
+                                                                                                // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                // |      F1     |      F2     |      F3     |      F4     |      F5     |      F6     |                  |     F7      |      "      |      Э      |      Х      |      Ъ      |     F11     |
+                                                                                                // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
+                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
+                                                                                                //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
+                                                                                                                        bindings = <
+                                                                                                       &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7        &kp AT        &kp SQT      &kp LBKT      &kp RBKT       &kp F11  
+                                                                                                      &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6         &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
+                                                                                                      &kp PLUS       &kp EXCL       &kp AT       &kp HASH      &kp DLLR     &kp PRCNT                       &kp CARET      &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp RA(G)
+                                                                                                                                                &lt ADJ TAB      &trans       &mo CSM                         &trans         &trans      &lt ADJ DEL
+                                                                                                                        >;
                                                                                                                 adjust_layer {
                                                                                                 // -----------------------------------------------------------------------------------------
                                                                                                 // |     BLDR    |             |             |             |             |             |                  |             |             |             |             |             |    BLDR     |

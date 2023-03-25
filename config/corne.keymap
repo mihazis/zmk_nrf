@@ -1,7 +1,7 @@
                                                                                                 /*
                                                                                                 * Copyright (c) 2021 Rafael Yumagulov
                                                                                                 *
-                                                                                                * SPDX-License-Identifier: MITh                          основной комп будем вешать на 1й слот, ноутбук на 5й
+                                                                                                * SPDX-License-Identifier: MITh                          основной комп будем вешать на 0й слот, ноутбук на 5й
                                                                                                 */
 
                                                                                                 #include <behaviors.dtsi>
@@ -45,12 +45,12 @@
                                                                                                                 };
                                                                                                                 lower_layer {
                                                                                                 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                                                                // |      ~      |      (      |      )      |      F4     |      ;      |      :      |                  |      !      |      "      |      Э      |      Х      |      Ъ      |     F11     |
+                                                                                                // |      ~      |      (      |      )      |      F4     |      ;      |      :      |                  |      !      |      "      |      Э      |      Х      |      Ъ      |      ,      |
                                                                                                 // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
                                                                                                 // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
                                                                                                 //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
                                                                                                                         bindings = <
-                                                                                                      &kp TILDE     &kp LPAR      &kp RPAR       &kp F4       &kp DLLR      &kp CARET                         &kp EXCL      &kp AT       &kp SQT       &kp LBKT      &kp RBKT       &kp F11  
+                                                                                                      &kp TILDE     &kp LPAR      &kp RPAR       &kp F4       &kp DLLR      &kp CARET                         &kp EXCL      &kp AT       &kp SQT       &kp LBKT      &kp RBKT      &kp LS(FSLH)  
                                                                                                       &kp EQUAL      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0       &kp RA(F)
                                                                                                       &kp PLUS       &kp EXCL      &kp AT       &kp HASH      &kp DLLR      &kp PRCNT                         &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp RA(G)
                                                                                                                                                &lt ADJ TAB    &trans        &mo CSM                           &trans        &trans      &lt ADJ DEL

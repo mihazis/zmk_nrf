@@ -12,8 +12,8 @@
                                                                                                 #define LWR 1
                                                                                                 #define RSE 2
                                                                                                 #define CSM 3
-                                                                                                #define ADJ 4
-                                                                                                #define GAM 5
+                                                                                                #define GAM 4
+                                                                                                #define ADJ 5
 
 
                                                                                                 &lt { quick_tap_ms = <200>; };

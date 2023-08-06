@@ -1,7 +1,7 @@
                                                                                                 /*
                                                                                                 * Copyright (c) 2021 Rafael Yumagulov
                                                                                                 *
-                                                                                                * SPDX-License-Identifier: MITh                          основной комп будем вешать на 0й слот, ноутбук на 5й
+                                                                                                * SPDX-License-Identifier: MITh                          основной комп на 4й слот (буква F) , ноутбук на 1й (буква S)
                                                                                                 */
 
                                                                                                 #include <behaviors.dtsi>
@@ -13,6 +13,8 @@
                                                                                                 #define RSE 2
                                                                                                 #define CSM 3
                                                                                                 #define ADJ 4
+                                                                                                #define GAM 5
+
 
                                                                                                 &lt { quick_tap_ms = <200>; };
                                                                                                 &mt { quick_tap_ms = <200>; };
@@ -24,7 +26,7 @@
                                                                                                         label = "TAP_DANCE_0";
                                                                                                         #binding-cells = <0>;
                                                                                                         tapping-term-ms = <200>;
-                                                                                                        bindings = <&kp RBKT>, <&kp LS(FSLH)>, <&kp PLUS>;
+                                                                                                        bindings = <&kp RBKT>, <&tog GAM>, <&kp PLUS>;
                                                                                                         };
                                                                                                 };
                                                                                                         keymap {
@@ -45,42 +47,55 @@
                                                                                                                 };
                                                                                                                 lower_layer {
                                                                                                 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                                                                // |     `/~     |      (      |      )      |      F4     |      ;      |      :      |                  |      !      |      "      |      Э      |      Х      |      Ъ      |      ,      |
-                                                                                                // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |    ALT+F    |
-                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |    ALT+G    |
-                                                                                                //                                           |     GUI     |             |     SPC     |                  |             |             |             |
+                                                                                                // |      ~      |      (      |      )      |      F4     |      ;      |      :      |                  |      !      |      "      |      Э      |      Х      |      Ъ      |      ,      |
+                                                                                                // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
+                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
+                                                                                                //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
                                                                                                                         bindings = <
-                                                                                                      &kp GRAVE     &kp LPAR      &kp RPAR       &kp F4       &kp DLLR      &kp CARET                         &kp EXCL      &kp AT       &kp SQT       &kp LBKT      &kp RBKT      &kp LS(FSLH)  
+                                                                                                      &kp TILDE     &kp LPAR      &kp RPAR       &kp F4       &kp DLLR      &kp CARET                         &kp EXCL      &kp AT       &kp SQT       &kp LBKT      &kp RBKT      &kp LS(FSLH)  
                                                                                                       &kp EQUAL      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0       &kp RA(F)
                                                                                                       &kp PLUS       &kp EXCL      &kp AT       &kp HASH      &kp DLLR      &kp PRCNT                         &kp CARET     &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp RA(G)
-                                                                                                                                               &lt ADJ TAB    &trans        &mo CSM                           &trans       &kt LALT      &lt ADJ DEL
+                                                                                                                                               &lt ADJ TAB    &trans        &mo CSM                           &trans        &trans      &lt ADJ DEL
                                                                                                                         >;
                                                                                                                 };
 
                                                                                                                 raise_layer {
                                                                                                 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                                                                // | Ctl+Alt+Tab |     Left    |     Enter   |    Right    |    Alt+4    |      -      |                  |     INS     |     BSPC    |     DEL     |      PGUP   |     SCLK    |     CLCK    |
-                                                                                                // |   Alt+Tab   |     C+a     |       |     |     TAB     |      .      |      ,      |                  |     LEFT    |     DOWN    |     UP      |      RGHT   |     INS     |     APP     |
-                                                                                                // |             |      ~      |     Win+x   |    Win+c    |    Win+v    |   Alt+Shift |                  |     HOME    |     PGDN    |     PGUP    |      END    |     PAUS    |             |
+                                                                                                // |    A+T13    |    Alt+F1   |     Alt+F2  |    Alt+3    |    Alt+4    |    MINUS    |                  |     INS     |     BSPC    |     DEL     |      PGUP   |     SCLK    |     CLCK    |
+                                                                                                // |&kp LA(LSHFT)|     C+a     |       |     |     TAB     |      .      |      ,      |                  |     LEFT    |     DOWN    |     UP      |      RGHT   |     INS     |     APP     |
+                                                                                                // |             |      ~      |     Win+x   |    Win+c    |    Win+v    |     A+S     |                  |     HOME    |     PGDN    |     PGUP    |      END    |     PAUS    |             |
                                                                                                 //                                           |     ADJ     |             |             |                  |     ADJ     |             |             |
                                                                                                                         bindings = <
-                                                                                                  &kp LC(LA(TAB))   &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                          &kp INS      &kp BSPC       &kp DEL      &kp PG_UP     &kp LS(N5)    &kp PIPE
-                                                                                                    &kp LA(TAB)     &kp LC(A)     &kp PIPE      &kp TAB       &kp FSLH     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp BSLH
-                                                                                                       &kp DEL      &kp GRAVE     &kp LG(X)     &kp LG(C)     &kp LG(V)   &kp LA(LSHFT)                       &kp HOME     &kp PG_DN      &kp PG_UP     &kp END     &kp LC(LA(M))  &kp FSLH
-                                                                                                                                                &lt ADJ RET    &mt LALT         &trans                        &mo CSM      &kp ENTER      &kp LS(ENTER)
+                                                                                                     &kp LA(TAB)    &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                          &kp INS      &kp BSPC       &kp DEL      &kp PG_UP     &kp LS(N5)    &kp LC(B)
+                                                                                                   &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB       &kp FSLH     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp LS(SQT)
+                                                                                                       &kp DEL      &kp GRAVE     &kp LG(X)     &kp LG(C)     &kp LG(V)   &kp LA(LSHFT)                       &kp HOME     &kp PG_DN      &kp PG_UP     &kp END     &kp LC(LA(M)) &kp LC(LA(F))
+                                                                                                                                                &lt ADJ RET    &trans         &trans                          &mo CSM      &kp ENTER      &kp LS(ENTER)
                                                                                                                         >;
                                                                                                                 };
                                                                                                                 custom_layer {
                                                                                                 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                                                                 // |      F1     |      F2     |      F3     |      F4     |      F5     |      F6     |                  |      F7     |      F8     |      F9     |     F10     |     F11     |     F12     |
-                                                                                                // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
-                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |    ALT+N    |      &      |      *      |      (      |      )      |      -      |
+                                                                                                // |      =      |      1      |      2      |      3      |      4      |     GAM     |                  |  ALT+ENTER  |      7      |      8      |      9      |      0      |     A+F     |
+                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |    ALT+N    |    ALT+M    |      *      |      (      |      )      |      -      |
                                                                                                 //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
                                                                                                                         bindings = <
-                                                                                                       &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7        &kp F8         &kp F9        &kp F10        &kp F11        &kp F12  
-                                                                                                      &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6         &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
-                                                                                                      &kp PLUS       &kp EXCL       &kp AT      &kp RA(C)     &kp RA(V)     &kp RA(B)                        &kp RA(N)      &kp RA(M)   &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)     &kp RA(G)
-                                                                                                                                                &lt ADJ TAB      &trans       &mo CSM                        &trans         &trans      &lt ADJ DEL
+                                                                                                       &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7         &kp F8         &kp F9        &kp F10        &kp F11        &kp F12  
+                                                                                                      &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &tog GAM                          &kp RA(ENTER)  &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
+                                                                                                      &kp PLUS       &kp EXCL       &kp AT       &kp RA(C)     &kp RA(V)      &kp RA(B)                       &kp RA(N)      &kp RA(M)   &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)     &kp RA(G)
+                                                                                                                                                &lt ADJ TAB     &trans        &mo CSM                         &trans         &trans      &lt ADJ DEL
+                                                                                                                        >;
+                                                                                                                };
+                                                                                                                game_layer {
+                                                                                                // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                // |      F1     |      F2     |      F3     |      F4     |      F5     |      F6     |                  |      F7     |      F8     |      F9     |     F10     |     F11     |   &tog GAM  |
+                                                                                                // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
+                                                                                                // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
+                                                                                                //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
+                                                                                                                        bindings = <
+                                                                                                      &kp ESC          &kp M         &kp Q         &kp W         &kp R         &kp T                        &kp F7         &kp F8         &kp F9        &kp F10        &kp F11        &kp F12  
+                                                                                                      &kp LGUI         &kp T         &kp A         &kp S         &kp D         &kp G                          &kp RA(ENTER)  &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
+                                                                                                      &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                        &kp RA(N)      &kp RA(M)   &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)     &kp RA(G)
+                                                                                                                                                &kp LSHFT     &kp SPACE      &mo RSE                         &trans         &trans      &lt ADJ DEL
                                                                                                                         >;
                                                                                                                 };
                                                                                                                 adjust_layer {

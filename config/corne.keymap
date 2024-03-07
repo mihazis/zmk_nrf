@@ -1,7 +1,7 @@
                                                                                                 /*
                                                                                                 * Copyright (c) 2021 Rafael Yumagulov
                                                                                                 *
-                                                                                                * SPDX-License-Identifier: MITh                          основной комп на 4й слот (буква F) , ноутбук на 1й (буква S)
+                                                                                                * SPDX-License-Identifier: MITh                          основной комп на 0-й слот (буква A) , ноутбук на 4-й (буква F)
                                                                                                 */
 
                                                                                                 #include <behaviors.dtsi>
@@ -62,12 +62,12 @@
                                                                                                                 raise_layer {
                                                                                                 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
                                                                                                 // |  Alt+Tab    |    Alt+F1   |     Alt+F2  |    Alt+3    |    Alt+4    |    MINUS    |                  |     INS     |     BSPC    |     DEL     |      PGUP   |     SCLK    |     CLCK    |
-                                                                                                // |&kp LA(LSHFT)|     C+a     |       |     |     TAB     |      .      |      ,      |                  |     LEFT    |     DOWN    |     UP      |      RGHT   |     INS     |     APP     |
+                                                                                                // |&kp LA(LSHFT)|     C+a     |       |     |     TAB     |    Alt+F    |      ,      |                  |     LEFT    |     DOWN    |     UP      |      RGHT   |     INS     |     APP     |
                                                                                                 // |             |      ~      |     Win+x   |    Win+c    |    Win+v    |     A+S     |                  |     HOME    |     PGDN    |     PGUP    |      END    |     PAUS    |             |
                                                                                                 //                                           |     ADJ     |             |             |                  | Custom Layer|             |             |
                                                                                                                         bindings = <
                                                                                                      &kp LA(TAB)    &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                          &kp INS      &kp BSPC       &kp DEL      &kp PG_UP     &kp LS(N5)    &kp LC(B)
-                                                                                                   &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB       &kp FSLH     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp LS(SQT)
+                                                                                                   &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB      &kp LA(F)     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp LS(SQT)
                                                                                                        &kp DEL      &kp GRAVE     &kp LG(X)     &kp LG(C)     &kp LG(V)   &kp LA(LSHFT)                       &kp HOME     &kp PG_DN      &kp PG_UP     &kp END     &kp LC(LA(M)) &kp LC(LA(F))
                                                                                                                                                 &lt ADJ RET    &trans         &trans                          &mo CSM      &kp ENTER      &kp LS(ENTER)
                                                                                                                         >;

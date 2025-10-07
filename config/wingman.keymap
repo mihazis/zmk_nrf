@@ -93,8 +93,8 @@
                         // | SHFT |  F11  |  F12   |  F13  |       |       |     |     |     |     |     |     |      |
                         //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                            &esc_ctrl LCTRL TAB &kp F1  &kp F2  &kp F3  &kp F4  &kp F5       &trans &trans &trans &trans &trans &kp BSPC
-                            &kp ESC &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans &trans &trans &trans &trans &trans
+                            &esc_ctrl LCTRL TAB &kp F1  &kp F2  &kp F3  &kp F4  &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+                            &kp ESC &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans &trans &trans &trans &trans &kp F12
                             &kp LSHFT &kp F11 &kp F12 &kp F13 &trans  &trans       &trans &trans &trans &trans &trans &trans
                                                       &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
